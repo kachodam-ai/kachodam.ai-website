@@ -714,6 +714,9 @@ section {
     color: #fff;
     transition: var(--transition);
     font-size: 1.2rem;
+    position: relative;
+    /* Ensure it sits above pseudo-elements */
+    z-index: 10;
 }
 
 .team-social:hover {
