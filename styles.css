@@ -732,6 +732,7 @@ section {
 .team-card:nth-child(2) .team-role {
     color: var(--accent-color);
 }
+
 /* Services Carousel */
 .services-carousel-container {
     overflow: hidden;
@@ -742,6 +743,10 @@ section {
 
 .services-carousel-track {
     display: flex;
+    flex-direction: row;
+    /* Explicitly set row */
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
     gap: 2rem;
     width: max-content;
     animation: scroll 40s linear infinite;
@@ -755,14 +760,17 @@ section {
     0% {
         transform: translateX(0);
     }
+
     100% {
-        transform: translateX(calc(-50% - 1rem)); /* Scroll half the track (gap included) */
+        transform: translateX(calc(-50% - 1rem));
+        /* Scroll half the track (gap included) */
     }
 }
 
 .service-card {
     min-width: 280px;
-    /* Ensure cards don't shrink */
+    flex: 0 0 auto;
+    /* Prevent shrinking and growing */
 }
 
 /* Gradient masks for smooth fade edges */
