@@ -732,3 +732,57 @@ section {
 .team-card:nth-child(2) .team-role {
     color: var(--accent-color);
 }
+/* Services Carousel */
+.services-carousel-container {
+    overflow: hidden;
+    padding: 2rem 0;
+    position: relative;
+    width: 100%;
+}
+
+.services-carousel-track {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.services-carousel-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 1rem)); /* Scroll half the track (gap included) */
+    }
+}
+
+.service-card {
+    min-width: 280px;
+    /* Ensure cards don't shrink */
+}
+
+/* Gradient masks for smooth fade edges */
+.services-carousel-container::before,
+.services-carousel-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.services-carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-color), transparent);
+}
+
+.services-carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-color), transparent);
+}
