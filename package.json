@@ -1,0 +1,16 @@
+{
+    "name": "kachodam-ai-website",
+    "version": "1.0.0",
+    "description": "Digital Transformation Website for kachodam.ai",
+    "scripts": {
+        "start": "npx serve",
+        "dev": "python3 -m http.server 8000"
+    },
+    "keywords": [
+        "website",
+        "kachodam.ai",
+        "digital-transformation"
+    ],
+    "author": "Thanoof Ayoob",
+    "license": "ISC"
+}
