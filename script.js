@@ -53,4 +53,44 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.add('fade-in'); // Add base class via JS or HTML
         observer.observe(section);
     });
+    // Language Switching Logic
+    const langToggle = document.getElementById('lang-toggle');
+    const langText = langToggle.querySelector('.lang-text');
+    let currentLang = 'ml'; // Default to Malayalam
+
+    function getNestedTranslation(obj, path) {
+        return path.split('.').reduce((prev, curr) => {
+            return prev ? prev[curr] : null;
+        }, obj);
+    }
+
+    function updateContent(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            const translation = getNestedTranslation(translations[lang], key);
+            if (translation) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translation;
+                } else {
+                    element.innerHTML = translation;
+                }
+            }
+        });
+
+        // Update button text
+        langText.textContent = lang === 'en' ? 'MAL' : 'ENG';
+
+        // Update document lang attribute
+        document.documentElement.lang = lang;
+    }
+
+    // Initialize with default language
+    updateContent(currentLang);
+
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'ml' : 'en';
+            updateContent(currentLang);
+        });
+    }
 });

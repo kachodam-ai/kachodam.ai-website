@@ -24,13 +24,19 @@
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo">kachodam<span class="highlight">.ai</span></a>
+            <div class="lang-switch-container">
+                <button id="lang-toggle" class="lang-btn">
+                    <span class="lang-text">ENG</span>
+                    <i class="fas fa-globe"></i>
+                </button>
+            </div>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#vision" class="nav-link">Vision</a></li>
-                    <li><a href="#team" class="nav-link">Team</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#contact" class="nav-link btn-primary">Get Started</a></li>
+                    <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#vision" class="nav-link" data-i18n="nav.vision">Vision</a></li>
+                    <li><a href="#team" class="nav-link" data-i18n="nav.team">Team</a></li>
+                    <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+                    <li><a href="#contact" class="nav-link btn-primary" data-i18n="nav.contact">Get Started</a></li>
                 </ul>
                 <div class="hamburger">
                     <span></span>
@@ -45,13 +51,13 @@
         <section id="home" class="hero">
             <div class="container hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Master Technology. <br> <span class="highlight">Grow Your Business.</span>
+                    <h1 class="hero-title" data-i18n="hero.title">Master Technology. <br> <span class="highlight">Grow Your Business.</span>
                     </h1>
-                    <p class="hero-subtitle">We don't just build software; we teach you how to use it. Empowering
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">We don't just build software; we teach you how to use it. Empowering
                         businesses to understand and leverage technology for growth.</p>
                     <div class="hero-cta">
-                        <a href="#contact" class="btn btn-primary">Start Now</a>
-                        <a href="#services" class="btn btn-secondary">Learn More</a>
+                        <a href="#contact" class="btn btn-primary" data-i18n="hero.cta_start">Start Now</a>
+                        <a href="#services" class="btn btn-secondary" data-i18n="hero.cta_learn">Learn More</a>
                     </div>
                 </div>
                 <!-- Image will be injected via CSS or JS dynamically later, kept clean structure for now -->
@@ -63,10 +69,10 @@
 
         <section id="vision" class="about">
             <div class="container">
-                <h2 class="section-title">Our Vision</h2>
+                <h2 class="section-title" data-i18n="vision.title">Our Vision</h2>
                 <div class="about-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 3rem auto;">
                     <div class="about-card" style="text-align: center;">
-                        <p style="font-size: 1.2rem; color: #cbd5e1;">To demystify technology. We believe every shop
+                        <p style="font-size: 1.2rem; color: #cbd5e1;" data-i18n="vision.text">To demystify technology. We believe every shop
                             deserves powerful tools and the knowledge to
                             use them effectively, without the complexity.</p>
                     </div>
@@ -76,14 +82,14 @@
 
         <section id="team" class="team">
             <div class="container">
-                <h2 class="section-title">The Architects</h2>
-                <p class="section-subtitle">Meet the minds behind the revolution.</p>
+                <h2 class="section-title" data-i18n="team.title">The Architects</h2>
+                <p class="section-subtitle" data-i18n="team.subtitle">Meet the minds behind the revolution.</p>
                 <div class="team-grid">
                     <!-- Sahad Pareed -->
                     <div class="team-card">
                         <h3 class="team-name">Sahad Pareed</h3>
-                        <div class="team-role">Digital Transformation Strategist</div>
-                        <p class="team-bio">8+ Years Experience. Blending architecture with AI speed to craft digital
+                        <div class="team-role" data-i18n="team.sahadRole">Digital Transformation Strategist</div>
+                        <p class="team-bio" data-i18n="team.sahadBio">8+ Years Experience. Blending architecture with AI speed to craft digital
                             masterpieces.</p>
                         <a href="https://www.linkedin.com/in/sahad-pareed-00474a151/" target="_blank"
                             class="team-social" title="LinkedIn">
@@ -94,8 +100,8 @@
                     <!-- Thanoof Ayoob -->
                     <div class="team-card">
                         <h3 class="team-name">Thanoof Ayoob</h3>
-                        <div class="team-role">Solution Architect</div>
-                        <p class="team-bio">5+ Years Experience. Creating robust, user-centric mobile solutions for
+                        <div class="team-role" data-i18n="team.thanoofRole">Solution Architect</div>
+                        <p class="team-bio" data-i18n="team.thanoofBio">5+ Years Experience. Creating robust, user-centric mobile solutions for
                             growing businesses.</p>
                         <a href="https://www.linkedin.com/in/thanoof-ayoob-74b377176/" target="_blank"
                             class="team-social" title="LinkedIn">
@@ -108,94 +114,94 @@
 
         <section id="services" class="services">
             <div class="container">
-                <h2 class="section-title">Tailored Solutions</h2>
-                <p class="section-subtitle">We build software that understands your business.</p>
+                <h2 class="section-title" data-i18n="services.title">Tailored Solutions</h2>
+                <p class="section-subtitle" data-i18n="services.subtitle">We build software that understands your business.</p>
                 <div class="services-carousel-container">
                     <div class="services-carousel-track">
                         <!-- Items (Original) -->
                         <div class="service-card">
                             <div class="icon">🏋️</div>
-                            <h3>Gym Management</h3>
-                            <p>Track memberships, attendance, and payments effortlessly.</p>
+                            <h3 data-i18n="services.gym.title">Gym Management</h3>
+                            <p data-i18n="services.gym.desc">Track memberships, attendance, and payments effortlessly.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">🥗</div>
-                            <h3>Restaurants</h3>
-                            <p>Digital menus, order tracking, and inventory management.</p>
+                            <h3 data-i18n="services.restaurant.title">Restaurants</h3>
+                            <p data-i18n="services.restaurant.desc">Digital menus, order tracking, and inventory management.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">🛒</div>
-                            <h3>Grocery Shops</h3>
-                            <p>Stock control, billing, and customer loyalty programs.</p>
+                            <h3 data-i18n="services.grocery.title">Grocery Shops</h3>
+                            <p data-i18n="services.grocery.desc">Stock control, billing, and customer loyalty programs.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">✏️</div>
-                            <h3>Stationary</h3>
-                            <p>Inventory for thousands of items made simple.</p>
+                            <h3 data-i18n="services.stationary.title">Stationary</h3>
+                            <p data-i18n="services.stationary.desc">Inventory for thousands of items made simple.</p>
                         </div>
 
                         <!-- New Items -->
                         <div class="service-card">
                             <div class="icon">💊</div>
-                            <h3>Pharmacies</h3>
-                            <p>Manage prescriptions, expiry alerts, and supplier orders.</p>
+                            <h3 data-i18n="services.pharmacy.title">Pharmacies</h3>
+                            <p data-i18n="services.pharmacy.desc">Manage prescriptions, expiry alerts, and supplier orders.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">💇‍♀️</div>
-                            <h3>Salons & Spas</h3>
-                            <p>Book appointments, manage staff schedules, and client history.</p>
+                            <h3 data-i18n="services.salon.title">Salons & Spas</h3>
+                            <p data-i18n="services.salon.desc">Book appointments, manage staff schedules, and client history.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">🥐</div>
-                            <h3>Bakeries</h3>
-                            <p>Handle custom cake orders, daily production, and batch tracking.</p>
+                            <h3 data-i18n="services.bakery.title">Bakeries</h3>
+                            <p data-i18n="services.bakery.desc">Handle custom cake orders, daily production, and batch tracking.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">👗</div>
-                            <h3>Boutiques</h3>
-                            <p>Track size/color variants and analyze fashion trends.</p>
+                            <h3 data-i18n="services.boutique.title">Boutiques</h3>
+                            <p data-i18n="services.boutique.desc">Track size/color variants and analyze fashion trends.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">📱</div>
-                            <h3>Electronics</h3>
-                            <p>Manage serial numbers, warranties, and repair job cards.</p>
+                            <h3 data-i18n="services.electronics.title">Electronics</h3>
+                            <p data-i18n="services.electronics.desc">Manage serial numbers, warranties, and repair job cards.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">🚗</div>
-                            <h3>Auto Spares</h3>
-                            <p>Find compatible parts instantly and manage stock levels.</p>
+                            <h3 data-i18n="services.autospares.title">Auto Spares</h3>
+                            <p data-i18n="services.autospares.desc">Find compatible parts instantly and manage stock levels.</p>
                         </div>
 
                         <!-- Duplicate Items for Infinite Scroll (First ~6 items) -->
                         <div class="service-card">
                             <div class="icon">🏋️</div>
-                            <h3>Gym Management</h3>
-                            <p>Track memberships, attendance, and payments effortlessly.</p>
+                            <h3 data-i18n="services.gym.title">Gym Management</h3>
+                            <p data-i18n="services.gym.desc">Track memberships, attendance, and payments effortlessly.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">🥗</div>
-                            <h3>Restaurants</h3>
-                            <p>Digital menus, order tracking, and inventory management.</p>
+                            <h3 data-i18n="services.restaurant.title">Restaurants</h3>
+                            <p data-i18n="services.restaurant.desc">Digital menus, order tracking, and inventory management.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">🛒</div>
-                            <h3>Grocery Shops</h3>
-                            <p>Stock control, billing, and customer loyalty programs.</p>
+                            <h3 data-i18n="services.grocery.title">Grocery Shops</h3>
+                            <p data-i18n="services.grocery.desc">Stock control, billing, and customer loyalty programs.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">✏️</div>
-                            <h3>Stationary</h3>
-                            <p>Inventory for thousands of items made simple.</p>
+                            <h3 data-i18n="services.stationary.title">Stationary</h3>
+                            <p data-i18n="services.stationary.desc">Inventory for thousands of items made simple.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">💊</div>
-                            <h3>Pharmacies</h3>
-                            <p>Manage prescriptions, expiry alerts, and supplier orders.</p>
+                            <h3 data-i18n="services.pharmacy.title">Pharmacies</h3>
+                            <p data-i18n="services.pharmacy.desc">Manage prescriptions, expiry alerts, and supplier orders.</p>
                         </div>
                         <div class="service-card">
                             <div class="icon">💇‍♀️</div>
-                            <h3>Salons & Spas</h3>
-                            <p>Book appointments, manage staff schedules, and client history.</p>
+                            <h3 data-i18n="services.salon.title">Salons & Spas</h3>
+                            <p data-i18n="services.salon.desc">Book appointments, manage staff schedules, and client history.</p>
                         </div>
                     </div>
                 </div>
@@ -205,9 +211,9 @@
         <section id="contact" class="contact">
             <div class="container contact-container">
                 <div class="contact-text">
-                    <h2 class="section-title">Ready to Upgrade?</h2>
-                    <p>Stop using pen and paper. Join the digital revolution today.</p>
-                    <a href="mailto:hello@kacho.in" class="btn btn-primary">Contact Us</a>
+                    <h2 class="section-title" data-i18n="contact.title">Ready to Upgrade?</h2>
+                    <p data-i18n="contact.text">Stop using pen and paper. Join the digital revolution today.</p>
+                    <a href="mailto:hello@kacho.in" class="btn btn-primary" data-i18n="contact.button">Contact Us</a>
                 </div>
             </div>
         </section>
@@ -217,22 +223,23 @@
         <div class="container footer-content">
             <div class="footer-logo">
                 <a href="#">kachodam<span class="highlight">.ai</span></a>
-                <p>Empowering Businesses</p>
+                <p data-i18n="footer.tagline">Empowering Businesses</p>
             </div>
             <div class="footer-links">
-                <a href="#vision">Vision</a>
-                <a href="#team">Team</a>
-                <a href="#services">Services</a>
-                <a href="mailto:hello@kacho.in">Contact</a>
+                <a href="#vision" data-i18n="nav.vision">Vision</a>
+                <a href="#team" data-i18n="nav.team">Team</a>
+                <a href="#services" data-i18n="nav.services">Services</a>
+                <a href="mailto:hello@kacho.in" data-i18n="nav.contact">Contact</a>
             </div>
             <div class="footer-copy">
-                &copy; 2024 kachodam.ai. All rights reserved.
+                <span data-i18n="footer.rights">&copy; 2024 kachodam.ai. All rights reserved.</span>
             </div>
         </div>
     </footer>
 
 
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 
